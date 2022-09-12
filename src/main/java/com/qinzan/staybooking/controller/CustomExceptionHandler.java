@@ -1,5 +1,6 @@
 package com.qinzan.staybooking.controller;
 
+import com.qinzan.staybooking.exception.StayNotExistException;
 import com.qinzan.staybooking.exception.UserAlreadyExistException;
 import com.qinzan.staybooking.exception.UserNotExistException;
 import org.springframework.http.HttpStatus;
@@ -19,5 +20,10 @@ public class CustomExceptionHandler {
     @ExceptionHandler(UserNotExistException.class)
     public final ResponseEntity<String> handleUserNotExistExceptions(Exception ex, WebRequest request) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(StayNotExistException.class)
+    public final ResponseEntity<String> handleStayNotExistExceptions(Exception ex, WebRequest request) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 }
