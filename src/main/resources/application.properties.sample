@@ -6,3 +6,4 @@ spring.datasource.url=jdbc:mysql://myLink:3306/staybooking?createDatabaseIfNotEx
 spring.datasource.username=myUsername
 spring.datasource.password=myPassword
 jwt.secret=secret
+gcs.bucket=myBucketName
