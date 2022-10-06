@@ -39,6 +39,5 @@ public class AuthenticationService {
         return new Token(jwtUtil.generateToken(user.getUsername()));
     }
 
-
 }
 

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomLocationRepositoryImpl implements CustomLocationRepository {
-    private final String DEFAULT_DISTANCE = "50";
+    private final String DEFAULT_DISTANCE = "1000";
     private ElasticsearchOperations elasticsearchOperations;
 
     @Autowired
